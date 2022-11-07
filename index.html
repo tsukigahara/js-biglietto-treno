@@ -14,16 +14,46 @@
     <script src="js/myscript.js"></script>
 </head>
 <body>
-    <header>
-        <h1>Calcolatore tariffa treno</h1>
-    </header>
-    <main>
-        <h4>inserire distanza in kilometri:</h4>
-        <div class="mb-3">
-          <label for="" class="form-label">Name</label>
-          <input type="text"
-            class="form-control" name="" id="distance" aria-describedby="helpId" placeholder="">
-          <small id="helpId" class="form-text text-muted">Help text</small>
+    <main class="d-sm-flex align-items-center">
+        <div class="container col-sm-4 rounded-4 p-3 bg-secondary bg-opacity-10">
+            <h1>Train Fare Calculator</h1>
+            <marquee behavior="" direction="" scrollamount="20">
+                <img style="width: 100%;" src="img/train8_green.png" alt="">
+            </marquee>
+            <div class="table-responsive col-5">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th colspan="2">
+                                Your price:
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>€</td>
+                            <td id="result">
+                                0.00
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Distance in kilometers</label>
+                <small id="helpId" class="form-text text-muted">(0.21 €/km)</small>
+                <input type="text" class="form-control" name="" id="distance" aria-describedby="helpId" placeholder="example: 10">
+                <small id="helpId" class="form-text text-muted">Only digits</small>
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Passenger's age</label>
+                <input type="text" class="form-control" name="" id="age" aria-describedby="helpId" placeholder="example: 18">
+                <small id="helpId" class="form-text text-muted">Only digits</small>
+            </div>
+            <div>
+                <button class="btn btn-primary" onclick="traincalc()">Show price</button>
+                <button class="btn btn-primary" onclick="window.location.reload()" >Reset</button>
+            </div>
         </div>
     </main>
 </body>
